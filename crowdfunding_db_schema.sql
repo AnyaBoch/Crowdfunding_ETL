@@ -47,13 +47,14 @@ CREATE TABLE "Subcategories" (
      )
 );
 
-ALTER TABLE "campaign" ADD CONSTRAINT "fk_Contacts_contact_id" FOREIGN KEY("contact_id")
+ALTER TABLE "campaign" ADD CONSTRAINT "fk_campaign_contact_id" FOREIGN KEY("contact_id")
 REFERENCES "Contacts" ("contact_id");
 
-ALTER TABLE "campaign" ADD CONSTRAINT "fk_Categories_category_id" FOREIGN KEY("category_id")
+ALTER TABLE "campaign" ADD CONSTRAINT "fk_campaign_category_id" FOREIGN KEY("category_id")
 REFERENCES "Categories" ("category_id");
 
-ALTER TABLE "campaign" ADD CONSTRAINT "fk_Subcategories_subcategory_id" FOREIGN KEY("subcategory_id")
+ALTER TABLE "campaign" ADD CONSTRAINT "fk_campaign_subcategory_id" FOREIGN KEY("subcategory_id")
 REFERENCES "Subcategories" ("subcategory_id");
+
 
 select * from campaign;
